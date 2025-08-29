@@ -1,63 +1,63 @@
 // ====== DATA ======
 const SERVICES = [
   {
-    icon: "🚨",
+    icon_path: "./assets/ambulance.png",
     name: "National Emergency Number",
     en: "National Emergency",
     number: "999",
     category: "All",
   },
   {
-    icon: "👮",
+    icon_path: "👮",
     name: "Police Helpline Number",
     en: "Police",
     number: "999",
     category: "Police",
   },
   {
-    icon: "🔥",
+    icon_path: "🔥",
     name: "Fire Service Number",
     en: "Fire Service",
     number: "999",
     category: "Fire",
   },
   {
-    icon: "🚑",
+    icon_path: "🚑",
     name: "Ambulance Service",
     en: "Ambulance",
     number: "1994-999999",
     category: "Health",
   },
   {
-    icon: "👩‍👧",
+    icon_path: "👩‍👧",
     name: "Women & Child Helpline",
     en: "Women & Child Helpline",
     number: "109",
     category: "Govt.",
   },
   {
-    icon: "🚫",
+    icon_path: "🚫",
     name: "Anti-Corruption Helpline",
     en: "Anti-Corruption",
     number: "106",
     category: "Govt.",
   },
   {
-    icon: "⚡",
+    icon_path: "⚡",
     name: "Electricity Helpline",
     en: "Electricity Outage",
     number: "16216",
     category: "Electricity",
   },
   {
-    icon: "🏥",
+    icon_path: "🏥",
     name: "BRAC Helpline",
     en: "Brac",
     number: "16445",
     category: "NGO",
   },
   {
-    icon: "🚆",
+    icon_path: "🚆",
     name: "Bangladesh Railway Helpline",
     en: "Bangladesh Railway",
     number: "163",
@@ -114,7 +114,7 @@ function createCard(service) {
 
   card.innerHTML = `
     <div class="top">
-      <div class="icon-circle" aria-hidden="true">${service.icon}</div>
+      <div class="icon-circle" aria-hidden="true">${service.icon_path}</div>
       <button class="heart-btn" title="Like">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-1-.6-1-1.4S6 15.8 4.1 13.8C2.2 11.9 2 9 3.5 7.3 5 5.6 7.9 5.5 9.7 7.3L12 9.5l2.3-2.2c1.8-1.8 4.7-1.7 6.2 0C22 9 21.8 11.9 19.9 13.8 18 15.8 13 19.6 13 19.6s-1 .8-1 1.4z"/></svg>
       </button>

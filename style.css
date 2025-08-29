@@ -78,11 +78,22 @@ body {
   border-radius: 999px;
   padding: 6px 10px;
   font-weight: 600;
+  background-color: rgba(65, 255, 107, 0.1);
 }
-.stat svg {
-  width: 18px;
-  height: 18px;
+
+.stat img {
+  width: 20px;
+  height: auto;
 }
+
+.stat:last-child {
+  background-color: #00a63e;
+  color: white;
+  font-size: 16px;
+  padding: 8px 20px;
+  text-align: center;
+}
+
 /* HERO */
 .hero {
   background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
@@ -282,15 +293,23 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: 900;
+  font-weight: 500;
 }
+
+.history-title img {
+  width: 25px;
+  height: auto;
+}
+
 .clear-btn {
-  background: #fff;
+  background: #00a63e;
   border: 1px solid #e5e7eb;
   border-radius: 999px;
-  padding: 8px 12px;
+  padding: 8px 20px;
   cursor: pointer;
-  font-weight: 700;
+  color: white;
+  font-size: 12px;
+  font-weight: 400;
 }
 .list {
   display: grid;
