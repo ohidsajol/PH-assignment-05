@@ -1,63 +1,63 @@
 // ====== DATA ======
 const SERVICES = [
   {
-    icon_path: "./assets/ambulance.png",
+    icon_path: "./assets/emergency.png",
     name: "National Emergency Number",
     en: "National Emergency",
     number: "999",
     category: "All",
   },
   {
-    icon_path: "👮",
+    icon_path: "./assets/police.png",
     name: "Police Helpline Number",
     en: "Police",
     number: "999",
     category: "Police",
   },
   {
-    icon_path: "🔥",
+    icon_path: "./assets/fire-service.png",
     name: "Fire Service Number",
     en: "Fire Service",
     number: "999",
     category: "Fire",
   },
   {
-    icon_path: "🚑",
+    icon_path: "./assets/ambulance.png",
     name: "Ambulance Service",
     en: "Ambulance",
     number: "1994-999999",
     category: "Health",
   },
   {
-    icon_path: "👩‍👧",
+    icon_path: "./assets/emergency.png",
     name: "Women & Child Helpline",
     en: "Women & Child Helpline",
     number: "109",
-    category: "Govt.",
+    category: "Help",
   },
   {
-    icon_path: "🚫",
+    icon_path: "./assets/emergency.png",
     name: "Anti-Corruption Helpline",
     en: "Anti-Corruption",
     number: "106",
     category: "Govt.",
   },
   {
-    icon_path: "⚡",
+    icon_path: "./assets/emergency.png",
     name: "Electricity Helpline",
     en: "Electricity Outage",
     number: "16216",
     category: "Electricity",
   },
   {
-    icon_path: "🏥",
+    icon_path: "./assets/emergency.png",
     name: "BRAC Helpline",
     en: "Brac",
     number: "16445",
     category: "NGO",
   },
   {
-    icon_path: "🚆",
+    icon_path: "./assets/emergency.png",
     name: "Bangladesh Railway Helpline",
     en: "Bangladesh Railway",
     number: "163",
@@ -114,27 +114,28 @@ function createCard(service) {
 
   card.innerHTML = `
     <div class="top">
-      <div class="icon-circle" aria-hidden="true">${service.icon_path}</div>
+      <div class="icon-image ${
+        service.en === "Police" ? "police" : ""
+      }" aria-hidden="true">
+        <img src="${service.icon_path}" >
+      </div>
       <button class="heart-btn" title="Like">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-1-.6-1-1.4S6 15.8 4.1 13.8C2.2 11.9 2 9 3.5 7.3 5 5.6 7.9 5.5 9.7 7.3L12 9.5l2.3-2.2c1.8-1.8 4.7-1.7 6.2 0C22 9 21.8 11.9 19.9 13.8 18 15.8 13 19.6 13 19.6s-1 .8-1 1.4z"/></svg>
+        <img src="./assets/heart-regular-full.svg" >
       </button>
     </div>
     <div class="title">${service.name}</div>
     <div class="subtitle">${service.en}</div>
     <div class="hotline">${service.number}</div>
-    <span class="badge">${service.category}</span>
+    <div class="category" >
+      <span class="badge">${service.category}</span>
+    </div>
     <div class="actions">
       <button class="btn copy" data-action="copy">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="9" y="9" width="13" height="13" rx="2"></rect>
-          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-        </svg>
+        <img src="./assets/copy-regular-full.svg" >
         Copy
       </button>
       <button class="btn call" data-action="call">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 11 19a19.5 19.5 0 0 1-8-8.05A2 2 0 0 1 5 8h3a2 2 0 0 1 2 1.72 12.44 12.44 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6.29 6.29l1.27-1.27a2 2 0 0 1 2.11-.45 12.44 12.44 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-        </svg>
+        <img src="./assets/phone-solid-full.svg" >
         Call
       </button>
     </div>

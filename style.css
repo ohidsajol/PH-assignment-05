@@ -14,7 +14,7 @@
   --ring: #dcfce7;
   --danger: #ef4444;
   --warning: #f59e0b;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
   --radius: 20px;
 }
 * {
@@ -51,12 +51,13 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-weight: 700;
 }
 
 .brand-title {
   font-size: 22px;
   color: #006747;
+  line-height: 1;
+  font-weight: 900;
 }
 
 .brand-logo img {
@@ -162,6 +163,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  min-width: auto;
   min-height: 170px;
   position: relative;
   overflow: hidden;
@@ -171,15 +173,23 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.icon-circle {
-  width: 36px;
-  height: 36px;
-  border-radius: 12px;
+.icon-image {
+  background-color: rgba(255, 227, 226, 1);
+  width: 30px;
+  height: 30px;
   display: grid;
   place-items: center;
-  background: #f1f5f9;
-  color: #0f172a;
+  border-radius: 8px;
 }
+.icon-image img {
+  width: 16px;
+  height: auto;
+}
+
+.police {
+  background-color: rgba(223, 239, 255, 1);
+}
+
 .heart-btn {
   border: none;
   background: #fff;
@@ -188,13 +198,17 @@ body {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  box-shadow: inset 0 0 0 1px #e5e7eb;
   cursor: pointer;
   transition: transform 0.08s ease;
 }
 .heart-btn:active {
   transform: scale(0.96);
 }
+.heart-btn img {
+  width: 20px;
+  height: auto;
+}
+
 .heart-pop {
   animation: pop 0.25s ease;
 }
@@ -210,28 +224,28 @@ body {
   }
 }
 .title {
-  font-weight: 800;
+  font-size: 24;
+  font-weight: 700;
   margin-top: 2px;
 }
 .subtitle {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
 }
 .badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #ecfeff;
-  color: #155e75;
-  border: 1px solid #cffafe;
+  /* display: inline-flex; */
+  /* align-items: center; */
+  /* gap: 6px; */
+  background: #f2f2f2;
+  color: rgba(92, 92, 92, 1);
+  /* border: 1px solid #cffafe; */
   padding: 4px 8px;
   border-radius: 999px;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 14px;
 }
 .hotline {
-  font-size: 22px;
-  font-weight: 900;
+  font-size: 25px;
+  font-weight: 600;
   letter-spacing: 0.5px;
 }
 .actions {
@@ -245,11 +259,12 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  font-size: 14px;
+  color: #5c5c5c;
   border-radius: 12px;
   border: 1px solid #e5e7eb;
   padding: 10px 12px;
   cursor: pointer;
-  font-weight: 700;
   background: #fff;
   transition: box-shadow 0.15s ease, transform 0.05s ease;
 }
@@ -260,14 +275,21 @@ body {
 .btn:active {
   transform: translateY(1px);
 }
-.btn.copy {
+.btn.copy img {
   background: #f9fafb;
+  width: 15px;
+  height: auto;
 }
 .btn.call {
   background: linear-gradient(180deg, #22c55e, #16a34a);
   border: none;
   color: #fff;
 }
+.btn.call img {
+  width: 15px;
+  height: auto;
+}
+
 .btn.call:disabled {
   background: #9ca3af;
   cursor: not-allowed;
@@ -308,9 +330,10 @@ body {
   padding: 8px 20px;
   cursor: pointer;
   color: white;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 10px;
+  font-weight: 600;
 }
+
 .list {
   display: grid;
   gap: 8px;
