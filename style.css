@@ -97,7 +97,7 @@ body {
 
 /* HERO */
 .hero {
-  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+  background: linear-gradient(to right, #013223 0%, #006747 50%, #013223 100%);
   color: #fff;
 }
 .hero-wrap {
